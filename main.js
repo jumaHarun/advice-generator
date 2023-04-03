@@ -15,12 +15,12 @@ function getAdviceHtml(slipObj) {
     return `<div class="container">
               <h6 class="advice-id">ADVICE #${slip.id}</h6>
               <p class="advice-text">${slip.advice}</p>
-              <img src="./images/pattern-divider-${
+              <img src="/images/pattern-divider-${
                   window.innerWidth > 600 ? 'desktop' : 'mobile'
               }.svg" aria-hidden="true" class="divider" />
               <div class="dice-icon" data-btn="newAdviceBtn">
                   <img 
-                  src="./images/icon-dice.svg" 
+                  src="/images/icon-dice.svg" 
                   alt="Generate new advice"
                   data-btn="newAdviceBtn"
                   />
@@ -28,7 +28,7 @@ function getAdviceHtml(slipObj) {
 
               <div class="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-                Coded by <a href="#">Your Name Here</a>.
+                Coded by <a href="https://twitter.com/jumaH4run">Juma Harun</a>.
               </div>
             </div>`;
 }
