@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+:root {
+    --ligth-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+/* Thanks https://piccalil.li/blog/a-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Sets the body default */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Manrope', sans-serif;
+    color: var(--ligth-cyan);
+    text-align: center;
+    background-color: var(--dark-blue);
+
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    max-width: 375px;
+    width: 90%;
+    margin-inline: auto;
+    background-color: var(--dark-grayish-blue);
+    padding: 1em 0.5em;
+    border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 575px;
+    }
+}
+
+.advice-id {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: var(--neon-green);
+}
+
+.advice-text {
+    font-size: 1.75rem;
+    font-weight: 800;
+    padding: 1em 0.5em;
+}
+
+.advice-text::before {
+    content: open-quote;
+}
+
+.advice-text::after {
+    content: close-quote;
+}
+
+.dice-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    place-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    cursor: pointer;
+
+    transform: translateY(75%);
+}
+
+/* .dice-icon:hover,
+.dice-icon:focus {
+    background-color: var(--grayish-blue);
+} */
+
+.attribution {
+    position: absolute;
+    inset: auto 0 0 0;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+/* 
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Light Cyan: hsl(193, 38%, 86%)
+- Neon Green: hsl(150, 100%, 66%)
+
+### Neutral
+
+- Grayish Blue: hsl(217, 19%, 38%)
+- Dark Grayish Blue: hsl(217, 19%, 24%)
+- Dark Blue: hsl(218, 23%, 16%)
+
+## Typography
+
+### Body Copy
+
+- Font size (quote): 28px
+
+### Font
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 800
+
+*/
